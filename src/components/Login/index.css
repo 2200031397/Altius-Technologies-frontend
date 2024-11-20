@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
@@ -99,7 +99,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Adding a subtle shadow to the container */
+
 .login-container::before {
   content: '';
   position: absolute;
