@@ -15,7 +15,7 @@ function AdminDashboard() {
       setLoading(true);
       const token = Cookies.get('authToken');
       try {
-        const response = await axios.get('http://localhost:3000/api/tickets', {
+        const response = await axios.get('https://altius-technologies-backend-1.onrender.com/api/tickets', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTickets(response.data);
@@ -30,7 +30,7 @@ function AdminDashboard() {
     const fetchCustomers = async () => {
       const token = Cookies.get('authToken');
       try {
-        const response = await axios.get('http://localhost:3000/api/customers', {
+        const response = await axios.get('https://altius-technologies-backend-1.onrender.com/api/customers', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCustomers(response.data);
@@ -47,7 +47,7 @@ function AdminDashboard() {
   const updateTicketStatus = async (ticketId, status) => {
     const token = Cookies.get('authToken');
     try {
-      const response = await axios.put(`http://localhost:3000/api/tickets/${ticketId}`, { status }, {
+      const response = await axios.put(`https://altius-technologies-backend-1.onrender.com/api/tickets/${ticketId}`, { status }, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTickets(tickets.map(ticket =>
@@ -64,7 +64,7 @@ function AdminDashboard() {
 
     const token = Cookies.get('authToken');
     try {
-      const response = await axios.post(`http://localhost:3000/api/tickets/${ticketId}/add-note`, 
+      const response = await axios.post(`https://altius-technologies-backend-1.onrender.com/api/tickets/${ticketId}/add-note`, 
         { content: noteContent[ticketId] }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -81,7 +81,7 @@ function AdminDashboard() {
   const handleDeleteTicket = async (ticketId) => {
     const token = Cookies.get('authToken');
     try {
-      await axios.delete(`http://localhost:3000/api/tickets/${ticketId}`, {
+      await axios.delete(`https://altius-technologies-backend-1.onrender.com/api/tickets/${ticketId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTickets(tickets.filter(ticket => ticket._id !== ticketId));
