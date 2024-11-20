@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './components/Login';
 import RegisterPage from './components/Register';
-import CustomerDashboard from './components/Dashboard/CustomerDashboard';
-import AgentDashboard from './components/Dashboard/AgentDashboard';
-import AdminDashboard from './components/Dashboard/AdminDashboard';
+import CustomerDashboard from './components/Dashboard/CustomerDashboard.js';
+import AgentDashboard from './components/Dashboard/AgentDashboard.js';
+import AdminDashboard from './components/Dashboard/AdminDashboard.js';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {

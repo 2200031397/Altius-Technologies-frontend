@@ -1,0 +1,147 @@
+/* Agent Dashboard Styles */
+.agent-dashboard {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f7fc;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.agent-dashboard h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+.agent-dashboard h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.agent-dashboard .ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.agent-dashboard .ticket-table th, .ticket-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.agent-dashboard .ticket-table th {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.agent-dashboard .ticket-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.agent-dashboard .ticket-table td {
+  vertical-align: top;
+}
+
+.agent-dashboard .ticket-actions button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.agent-dashboard .ticket-actions button:hover {
+  background-color: #357ab7;
+}
+
+.agent-dashboard .ticket-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  font-size: 1em;
+  resize: vertical;
+}
+
+.agent-dashboard .ticket-textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.agent-dashboard .add-note-button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.agent-dashboard .add-note-button:hover {
+  background-color: #357ab7;
+}
+
+.agent-dashboard .notes-section ul {
+  list-style-type: square;
+  margin-top: 10px;
+}
+
+.agent-dashboard .notes-section li {
+  padding: 5px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.agent-dashboard .notes-section em {
+  font-size: 0.85em;
+  color: #777;
+}
+
+.agent-dashboard .error-message {
+  color: red;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.agent-dashboard .loading {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .agent-dashboard {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .agent-dashboard h2 {
+    font-size: 1.8em;
+  }
+
+  .agent-dashboard h3 {
+    font-size: 1.3em;
+  }
+
+  .agent-dashboard .ticket-table th, .ticket-table td {
+    padding: 10px;
+  }
+
+  .agent-dashboard .ticket-actions button {
+    padding: 6px 10px;
+  }
+
+  .agent-dashboard .ticket-textarea {
+    font-size: 0.9em;
+  }
+}

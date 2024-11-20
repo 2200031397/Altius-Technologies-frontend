@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2, h3 {
+    color: #2c3e50;
+  }
+  
+  /* Container for the whole dashboard */
+  .customer-dashboard-container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Create Ticket Section */
+  .create-ticket-section {
+    margin-bottom: 30px;
+  }
+  
+  .create-ticket-section input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .create-ticket-section button {
+    padding: 10px 15px;
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .create-ticket-section button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Tickets Table Styles */
+  .ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  .ticket-table th, .ticket-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .ticket-table th {
+    background-color: #34495e;
+    color: #fff;
+  }
+  
+  .ticket-table td {
+    background-color: #f9f9f9;
+  }
+  
+  .ticket-table tr:hover {
+    background-color: #ecf0f1;
+  }
+  
+  /* Nested Notes Table Styles */
+  .notes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .notes-table th, .notes-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .notes-table th {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+  
+  .notes-table td {
+    background-color: #f9f9f9;
+  }
+  
+  /* Textarea for Adding Notes */
+  .add-note-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .add-note-btn {
+    padding: 8px 12px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .add-note-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .customer-dashboard-container {
+      width: 95%;
+    }
+  
+    .ticket-table, .ticket-table td, .ticket-table th {
+      font-size: 14px;
+    }
+  }
+  

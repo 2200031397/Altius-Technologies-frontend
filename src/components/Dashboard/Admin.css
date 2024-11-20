@@ -1,0 +1,79 @@
+.admin-dashboard {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    height: 100%;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .tickets-section,
+  .customers-section {
+    margin-bottom: 20px;
+  }
+  
+  .tickets-table,
+  .customers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .tickets-table th,
+  .customers-table th,
+  .tickets-table td,
+  .customers-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .tickets-table th,
+  .customers-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .tickets-table tr:nth-child(even),
+  .customers-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tickets-table tr:hover,
+  .customers-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .notes-section {
+    margin-bottom: 20px;
+  }
+  
+  .notes-section textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+
+
+  

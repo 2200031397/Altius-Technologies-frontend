@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './index.css'; // Make sure to import the CSS file
 
 function RegisterPage() {
   const [name, setName] = useState('');
@@ -16,27 +17,50 @@ function RegisterPage() {
       alert('Registration successful! Please login.');
       navigate('/');
     } catch (error) {
-      // Log the full error object to inspect
       console.error('Error during registration:', error);
       const errorMessage = error.response ? error.response.data.error : error.message;
       alert(`Error registering user: ${errorMessage}`);
     }
   };
-  
 
   return (
-    <div>
+    <div className="register-container">
       <h2>Register</h2>
-      <form onSubmit={handleRegister}>
-        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
+      <form className="register-form" onSubmit={handleRegister}>
+        <input
+          type="text"
+          className="input-field"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+        <input
+          type="email"
+          className="input-field"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          className="input-field"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <select
+          className="select-field"
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+        >
           <option value="Customer">Customer</option>
           <option value="Agent">Agent</option>
           <option value="Admin">Admin</option>
         </select>
-        <button type="submit">Register</button>
+        <button type="submit" className="submit-button">Register</button>
       </form>
     </div>
   );
