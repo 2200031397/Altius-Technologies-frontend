@@ -5,13 +5,13 @@ import './Customer.css';
 function CustomerDashboard() {
   const [tickets, setTickets] = useState([]);
   const [newTicketTitle, setNewTicketTitle] = useState('');
-  const [noteContents, setNoteContents] = useState({}); // State for managing notes per ticket
+  const [noteContents, setNoteContents] = useState({});
 
-  // Fetch customer-specific tickets including notes when the component mounts
+  
   const fetchCustomerTickets = async () => {
-    const token = Cookies.get('authToken'); // Retrieve token from cookies
+    const token = Cookies.get('authToken'); 
     try {
-      const response = await axios.get('http://localhost:3000/api/tickets/my-tickets', {
+      const response = await axios.get('https://altius-technologies-backend-1.onrender.com/api/tickets/my-tickets', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTickets(response.data);
@@ -21,12 +21,12 @@ function CustomerDashboard() {
     }
   };
 
-  // Create a new ticket
+  
   const handleCreateTicket = async () => {
     const token = Cookies.get('authToken'); // Retrieve token from cookies
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/tickets',
+        'https://altius-technologies-backend-1.onrender.com/api/tickets',
         { title: newTicketTitle },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -41,18 +41,19 @@ function CustomerDashboard() {
     }
   };
 
-  // Add a note to an existing ticket
+  
   const handleAddNote = async (ticketId) => {
     const token = Cookies.get('authToken');
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/tickets/${ticketId}/add-note`,
+        `https://altius-technologies-backend-1.onrender.com/api/tickets/${ticketId}/add-note`,
         { content: noteContents[ticketId] || '' },
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      // Update tickets state with the new note
+
+      
       const updatedTickets = tickets.map(ticket =>
         ticket._id === ticketId ? { ...ticket, notes: response.data.notes } : ticket
       );
@@ -65,7 +66,7 @@ function CustomerDashboard() {
     }
   };
 
-  // Update note content for a specific ticket
+
   const handleNoteChange = (ticketId, value) => {
     setNoteContents({ ...noteContents, [ticketId]: value });
   };
