@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './index.css'; // Make sure to import the CSS file
+import './index.css'; 
 
 function RegisterPage() {
   const [name, setName] = useState('');
@@ -13,7 +13,7 @@ function RegisterPage() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/register', { name, email, password, role });
+      await axios.post('https://altius-technologies-backend-1.onrender.com/api/register', { name, email, password, role });
       alert('Registration successful! Please login.');
       navigate('/');
     } catch (error) {
