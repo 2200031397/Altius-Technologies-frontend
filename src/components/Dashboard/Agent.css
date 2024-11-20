@@ -1,4 +1,4 @@
-/* Agent Dashboard Styles */
+
 .agent-dashboard {
   font-family: Arial, sans-serif;
   padding: 20px;
@@ -118,7 +118,7 @@
   color: #555;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .agent-dashboard {
     padding: 15px;
