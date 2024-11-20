@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import './Admin.css'; // Import the CSS file
+import './Admin.css'; 
 
 function AdminDashboard() {
   const [tickets, setTickets] = useState([]);
