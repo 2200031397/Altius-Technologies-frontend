@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import './index.css'; // Make sure to import the CSS file
+import './index.css'; 
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -12,7 +12,7 @@ function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/login', { email, password });
+      const response = await axios.post('https://altius-technologies-backend-1.onrender.com/api/login', { email, password });
       Cookies.set('authToken', response.data.token, { expires: 1 });
       const userRole = response.data.user.role;
       if (userRole === 'Customer') navigate('/customer');
